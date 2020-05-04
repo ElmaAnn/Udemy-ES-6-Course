@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Array Objects - Example 2</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      var inventory = [
+        { name: "apples", quantity: 2 },
+        { name: "bananas", quantity: 4 },
+        { name: "cherries", quantity: 6 },
+      ];
+
+      function findCherries(fruit) {
+        return fruit.name === "cherries";
+      }
+      console.log(inventory.find(findCherries));
+    </script>
+  </body>
+</html>

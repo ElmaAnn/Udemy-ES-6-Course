@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Inheritance - Example</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+        greet() {
+          console.log("Name : " + this.name + "- Age : " + this.age);
+        }
+      }
+      class Max extends Person {
+        constructor(age) {
+          super("Max");
+          this.age = age;
+        }
+      }
+      let max = new Max(25);
+      max.greet();
+    </script>
+  </body>
+</html>

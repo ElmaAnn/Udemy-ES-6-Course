@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Promise Chaining in Action</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      function waitASecond(seconds) {
+        return (promise = new Promise(function (resolve, reject) {
+          if (seconds > 2) {
+            reject("Rejected.!");
+          } else {
+            setTimeout(function () {
+              seconds++;
+              resolve(seconds);
+            }, 1500);
+          }
+        }));
+      }
+
+      waitASecond(2)
+        .then(waitASecond)
+        .then(function (seconds) {
+          console.log(seconds);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

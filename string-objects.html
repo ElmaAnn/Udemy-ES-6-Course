@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title></title>
+    <h1>String Objects</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let name = "Maxmillan";
+      console.log(
+        name.startsWith("Max"),
+        "Max is the value passed in startsWith()"
+      );
+      console.log(
+        name.startsWith("max"),
+        "max is the value passed in startsWith()"
+      );
+      console.log(
+        name.startsWith("Maxx"),
+        "Maxx is the value passed in startsWith()"
+      );
+
+      console.log(name.endsWith("an"), "an is the value passed in endsWith()");
+      console.log(name.endsWith("AN"), "AN is the value passed in endsWith()");
+
+      console.log(
+        name.includes("an"),
+        "an is the value passed in includes() method"
+      );
+
+      console.log(
+        name.includes("Max"),
+        "Max is the value passed in includes() method"
+      );
+      console.log(
+        name.includes("mil"),
+        "mil is the value passed in includes() method"
+      );
+    </script>
+  </body>
+</html>

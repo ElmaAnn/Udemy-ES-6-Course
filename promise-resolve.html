@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Promise- resolve() in Action</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve("Done");
+        }, 2000);
+      });
+      promise.then(function (value) {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>

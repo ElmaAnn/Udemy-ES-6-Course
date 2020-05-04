@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Object Prototype - set method</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Bob",
+      };
+      let boss = {
+        name: "Anna",
+      };
+      console.log(person.__proto__ === Object.prototype);
+      console.log(person.__proto__ === boss, "Before setting prototype..");
+
+      Object.setPrototypeOf(person, boss);
+      console.log(person.__proto__ === boss, "After setting prototype..");
+      console.log(person.name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Generator Functions in Action</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        [Symbol.iterator]: gen,
+      };
+
+      function* gen(end) {
+        for (let i = 0; i < end; i++) {
+          yield i;
+        }
+      }
+      let it = gen(2);
+      console.log(it.next());
+      console.log(it.next());
+      console.log(it.next());
+      console.log(it.next());
+    </script>
+  </body>
+</html>

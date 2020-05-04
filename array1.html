@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Array Objects - Example 1</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let array_1 = Array.of(5, 6, 7);
+      console.log(array_1);
+      let array_2 = [10, 20, 30];
+      array_2.fill(100);
+      let array_3 = [11, 27, 33];
+      array_3.fill(100, 1, 2);
+      console.log(array_3, "using fill method");
+      let array = [10, 12, 16];
+      console.log(
+        array.find((val) => val > 11),
+        "using find method,returns only the first true condition"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Number Objects</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let number_1 = "NaN";
+      let number_2 = NaN;
+      let number_3 = Infinity;
+      console.log(Number.isNaN(number_1), "a string value");
+      console.log(Number.isNaN(number_2), "a NaN value");
+      console.log(Number.isFinite(number_3), "an infinite value");
+      console.log(
+        Number.isInteger(number_3),
+        "an infinite value is not an integer"
+      );
+    </script>
+  </body>
+</html>

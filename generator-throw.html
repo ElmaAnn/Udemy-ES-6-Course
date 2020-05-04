@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Generator Throw method in Action</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      function* gen(end) {
+        for (let i = 0; i < end; i++) {
+          try {
+            yield 1;
+          } catch (e) {
+            console.log(e);
+          }
+        }
+      }
+
+      let it = gen(2);
+
+      console.log(it.next());
+      console.log(it.throw("An error occured...in throw method"));
+      //console.log(it.return("An error occured...in return method"));
+      console.log(it.next());
+      console.log(it.next());
+    </script>
+  </body>
+</html>

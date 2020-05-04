@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Objects</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Obj1 {
+        constructor() {
+          this.a = 1;
+        }
+      }
+      class Obj2 {
+        constructor() {
+          this.b = 2;
+        }
+      }
+      var obj1 = new Obj1();
+      var obj2 = new Obj2();
+
+      var objA = Object.assign(obj1, obj2);
+
+      console.log(
+        objA.__proto__ === Obj1.prototype,
+        "prototype of first object will be assigned.."
+      );
+      var objB = Object.assign({}, obj1, obj2);
+      console.log(
+        objB.__proto__ === obj1.prototype,
+        "prototype of first object will be assigned.."
+      );
+      console.log(
+        objB.__proto__ === Object.prototype,
+        "prototype of first object,here empty object will be assigned"
+      );
+    </script>
+  </body>
+</html>

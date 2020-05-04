@@ -1,0 +1,19 @@
+<head>
+    <title></title>
+    <h1>Array Objects - Example 3</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+        let array=[1,2,3];
+        console.log(array.copyWithin(1,2),"copyWithin method in array");
+        console.log(array.copyWithin(1,0,2),"copyWithin method in array");
+
+        let it = array.entries();
+        for(let element of it){
+            console.log(element,"entries() method in iterator");
+        }
+        
+    </script>
+  </body>
+</html>
