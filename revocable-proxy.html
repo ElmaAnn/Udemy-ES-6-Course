@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Revocable Proxies</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Max",
+      };
+
+      let handler = {
+        get: function (target, property) {
+          return Reflect.get(target, property);
+        },
+      };
+      let { proxy, revoke } = Proxy.revocable(person, handler);
+      console.log(person.name);
+      revoke();
+
+      console.log(proxy.name);
+    </script>
+  </body>
+</html>

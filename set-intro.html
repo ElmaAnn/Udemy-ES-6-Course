@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Set -Intro Example</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let set = new Set([1, 1, 1]);
+      set.add(2);
+      //set.delete(1);
+      //set.clear();
+      console.log(set.has(1), "check if element exists in a set");
+
+      for (elements of set) {
+        console.log(elements);
+      }
+
+      for (elements of set.entries()) {
+        console.log(elements, "using entries() method");
+      }
+      for (elements of set.keys()) {
+        console.log(elements, "using keys() method");
+      }
+
+      for (elements of set.values()) {
+        console.log(elements, "using values() method");
+      }
+    </script>
+  </body>
+</html>

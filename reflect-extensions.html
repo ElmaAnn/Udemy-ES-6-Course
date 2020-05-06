@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Reflect API - Preventing Object Extensions</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this._name = name;
+          this.age = age;
+        }
+        get name() {
+          return this._name;
+        }
+        set name(value) {
+          this._name = value;
+        }
+      }
+
+      let mum = {
+        _name: "Mum",
+      };
+
+      let person = new Person("Max", 25);
+      console.log(Reflect.isExtensible(person));
+      Reflect.preventExtensions(person);
+      console.log(Reflect.isExtensible(person));
+
+      Reflect.defineProperty(person, "hobbies", {
+        //writable: true,
+        value: ["Sports", "Cooking"],
+        configurable: true,
+      });
+
+      console.log(person.hobbies);
+    </script>
+  </body>
+</html>

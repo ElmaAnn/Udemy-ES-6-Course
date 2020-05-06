@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Proxy API - Reflect</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let person = {
+        age: 27,
+        name: "Max",
+      };
+      let handler = {
+        get: function (target, name) {
+          return name in target ? target[name] : "Non existent";
+        },
+        set: function (target, property, value) {
+          if (value.length >= 2) {
+            Reflect.set(target, property, value);
+          }
+        },
+      };
+
+      var proxy = new Proxy(person, handler);
+      proxy.name = "Maxmillan";
+      console.log(proxy.name);
+      console.log(proxy.age);
+    </script>
+  </body>
+</html>

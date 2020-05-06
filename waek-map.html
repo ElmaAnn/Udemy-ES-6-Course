@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Weak Map - Example</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let cardAce = {
+        name: "Ace of Spades",
+      };
+      let cardKing = {
+        name: "King of Clubs",
+      };
+      let cardJack = {
+        name: "Jack of Hearts",
+      };
+
+      let key1 = { a: 1 };
+      let key2 = { b: 2 };
+      let deck = new WeakMap();
+      deck.set(key1, cardAce);
+      deck.set(key2, cardKing);
+
+      console.log(deck.get(key1));
+    </script>
+  </body>
+</html>

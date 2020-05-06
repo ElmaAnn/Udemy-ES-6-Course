@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Map Objects - Example 1</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      let cardAce = {
+        name: "Ace of Spades",
+      };
+      let cardKing = {
+        name: "King of Clubs",
+      };
+      let cardJack = {
+        name: "Jack of Hearts",
+      };
+      let deck = new Map();
+      deck.set("as", cardAce);
+      deck.set("ck", cardKing);
+      deck.set("jh", cardJack);
+
+      console.log(deck.get("as"));
+
+      deck.delete("as");
+      console.log(deck.get("as"));
+      //deck.clear();
+      console.log(deck.keys());
+
+      for (keys of deck.keys()) {
+        console.log(keys, "Keys in the map object");
+      }
+
+      for (entry of deck.entries()) {
+        console.log(entry, "Key-value pair in the map object");
+      }
+
+      for (entry of deck) {
+        console.log(
+          entry,
+          "Key-value pair in the map object without entries() method"
+        );
+      }
+    </script>
+  </body>
+</html>

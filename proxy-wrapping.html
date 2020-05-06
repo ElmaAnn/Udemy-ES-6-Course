@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Proxy API - Wrapping Functions</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      function log(message) {
+        console.log("Log entry created :" + message);
+      }
+      let handler = {
+        apply: function (target, thisArg, argumentsList) {
+          if (argumentsList.length == 1) {
+            return Reflect.apply(target, thisArg, argumentsList);
+          }
+        },
+      };
+      let proxy = new Proxy(log, handler);
+      proxy("Hellooo", 15);
+    </script>
+  </body>
+</html>

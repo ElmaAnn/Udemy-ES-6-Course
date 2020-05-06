@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Reflect API - Accessing Properties</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this._name = name;
+          this.age = age;
+        }
+        get name() {
+          return this._name;
+        }
+        set name(value) {
+          this._name = value;
+        }
+      }
+
+      let mum = {
+        _name: "Mum",
+      };
+
+      let person = new Person("Max", 25);
+      console.log(Reflect.ownKeys(person), "ownKeys() method..");
+      Reflect.set(person, "name", "Anna", mum);
+      console.log(mum);
+      console.log(Reflect.get(person, "name", mum));
+      console.log(Reflect.has(person, "name"));
+    </script>
+  </body>
+</html>

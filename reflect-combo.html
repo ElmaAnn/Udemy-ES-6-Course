@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Reflect API - Combination of all methods</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = "Max";
+        }
+      }
+
+      let person = new Person();
+      Person.prototype.age = 27;
+      let proto = {
+        age: 30,
+        greet() {
+          console.log("Hello");
+        },
+      };
+      Reflect.setPrototypeOf(person, proto);
+
+      Reflect.apply(person.greet, null, []);
+    </script>
+  </body>
+</html>

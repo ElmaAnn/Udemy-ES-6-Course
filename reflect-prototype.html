@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title></title>
+    <h1>Reflect API - prototype</h1>
+    <h3>Check the console....for the output</h3>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = "Max";
+        }
+      }
+
+      let person = new Person();
+      Person.prototype.age = 27;
+      let proto = {
+        age: 30,
+      };
+      Reflect.setPrototypeOf(person, proto);
+
+      console.log(Reflect.getPrototypeOf(person));
+      console.log(Reflect.getPrototypeOf(person) == Person.prototype);
+    </script>
+  </body>
+</html>
